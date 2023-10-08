@@ -45,8 +45,8 @@ axios.interceptors.response.use(response => {
 
 const requests = {
     get: (url: string) => axios.get(url).then(resBody),
-    // post: (url: string, body: {}) => axios.post(url).then(resBody),
-    // put: (url: string, body: {}) => axios.put(url).then(resBody),
+    post: (url: string, body: {}) => axios.post(url).then(resBody),
+    put: (url: string, body: {}) => axios.put(url).then(resBody),
     delete: (url: string) => axios.delete(url).then(resBody),
 }
 

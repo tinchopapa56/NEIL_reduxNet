@@ -7,6 +7,7 @@ import Catalog from '../../features/catalog/Catalog'
 
 import { ToastContainer } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css"
+import { Outlet } from 'react-router-dom'
 
 const App = () => {
 
@@ -24,12 +25,8 @@ const App = () => {
         <CssBaseline />
         <Header toggleMode={setIsDarkMode} />
         
-        
         <Container>
-          {/* <Outlet /> */}
-          {/* <About /> */}
-          <Catalog />
-          {/* <About /> */}
+          <Outlet />
         </Container>
 
     </ThemeProvider>

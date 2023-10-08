@@ -1,13 +1,17 @@
 import { Avatar,  Card, CardContent, CardHeader, CardMedia, Typography, Button, CardActions } from '@mui/material';
 import { IProduct } from '../../app/interfaces';
+import { Link } from 'react-router-dom';
 
 type Props = {
     product: IProduct;
 }
 
 export default function ProductCard({product}: Props) {
+  
+  console.log(product.id)
+
   return (
-    <Card>
+    <Card key={product.ID}>
       <CardHeader 
         avatar={
           <Avatar>
@@ -32,7 +36,7 @@ export default function ProductCard({product}: Props) {
 
       <CardActions>
           <Button size="small">Add to cart</Button>
-          <Button size="small">View</Button>
+          <Button component={Link} to={`/catalog/${product.id}`} size="small">View</Button>
       </CardActions>
     </Card>
   )
