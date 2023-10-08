@@ -7,7 +7,7 @@ namespace API.Entities
 {
     public class Basket
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
         public string BuyerID { get; set; }
         public List<BasketItem> Items { get; set; } = new(); // new List<BasketItem>();
 
